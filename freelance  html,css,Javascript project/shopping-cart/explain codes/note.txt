@@ -1,0 +1,28 @@
+we can move the main.js and style.css 
+
+after you can run the index.html it can show some empty reslts 
+because the those files are moved from 
+
+
+src files so you can add the
+
+.... src code  include index.htmlfile let shownbelow the code 
+
+
+those src can add normally before based run the code .
+
+add the src is necessary.
+
+
+
+<link rel="stylesheet" href="src/style.css">
+
+<script src="src/main.js"></script>
+
+
+
+//2 these project canuse the icons website 
+
+  www.getbootsrapicons.com use the symbols refernce ok now all are 
+
+make use of it.

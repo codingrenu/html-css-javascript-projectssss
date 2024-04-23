@@ -1,0 +1,10 @@
+
+
+this code is mianly firstly explain the navbar can click move to one page 
+to another page in the reaon will apply the 
+
+anchor tag use   
+
+            < a href=index.html>
+
+explain below codes

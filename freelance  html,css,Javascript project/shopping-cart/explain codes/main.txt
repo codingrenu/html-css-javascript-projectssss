@@ -1,0 +1,1672 @@
+
+\\ cut back tip 
+
+
+`
+    <div class="item">
+        <img src="./images/img-1.jpg" alt="" width="220">
+        <div class="details">
+            <h3>casual shirt</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="price-quantity">
+                <h2>$ 45</h2>
+                <div class="buttons">
+                    <i class="bi bi-dash"></i>
+                    <div class="quantity">0</div>
+                    <i class="bi bi-plus-lg"></i>
+                       
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="./images/img-2.jpg" alt="" width="220">
+        <div class="details">
+            <h3>Office shirt</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="price-quantity">
+                <h2>$ 100</h2>
+                <div class="buttons">
+                    <i class="bi bi-dash"></i>
+                    <div class="quantity">0</div>
+                    <i class="bi bi-plus-lg"></i>
+                       
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="./images/img-3.jpg" alt="" width="220">
+        <div class="details">
+            <h3>T shirt</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="price-quantity">
+                <h2>$ 25</h2>
+                <div class="buttons">
+                    <i class="bi bi-dash"></i>
+                    <div class="quantity">0</div>
+                    <i class="bi bi-plus-lg"></i>
+                       
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+    <img src="./images/img-4.jpg" alt="" width="220">
+    <div class="details">
+        <h3>Mens suit</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <div class="price-quantity">
+            <h2>$ 300</h2>
+            <div class="buttons">
+                <i class="bi bi-dash"></i>
+                <div class="quantity">0</div>
+                <i class="bi bi-plus-lg"></i>
+                   
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+let shop = document.getElementById('shop');
+
+//console.log(shop);
+
+//  let generateshop =()=>{}   esi-aarrow function
+
+//function abcd()----regular function
+
+
+
+/**
+ * !let generateshop =()=> {
+    
+        return `
+    
+        `;
+    };
+    
+    generateshop();
+ 
+**/
+
+
+
+let shopItemsData = [{
+    id:"dxwjhwkk",
+    name:"casual shirt",
+    price:45,
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing.",
+    img:"images/img-1.jpg",
+},
+{
+    id:"hdbqidjq",
+    name:"Office shirt",
+    price:100,
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing.",
+    img:"images/img-2.jpg", 
+},
+{
+    id:"dwdhiwidjw",
+    name:"T shirt",
+    price:25,
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing.",
+    img:"images/img-3.jpg",
+},
+{
+    id:"djwdkqpdpq",
+    name:"Mens suit",
+    price:300,
+    desc:"Lorem ipsum dolor sit amet consectetur adipisicing.",
+    img:"images/img-4.jpg",
+},
+];
+
+
+
+//2. backtip insert and join insert
+
+let generateshop =()=> {
+    
+    return (shop.innerHTML = shopItemsData.map((x)=>{
+        return `
+        <div class="item">
+            <img src="./images/img-1.jpg" alt="" width="220">
+            <div class="details">
+                <h3>casual shirt</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <div class="price-quantity">
+                    <h2>$ 45</h2>
+                    <div class="buttons">
+                        <i class="bi bi-dash"></i>
+                        <div class="quantity">0</div>
+                        <i class="bi bi-plus-lg"></i>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+    `;
+    }).join(""));
+    
+
+};
+
+generateshop();
+
+
+
+
+
+//3.imagecode
+
+
+ <div class="item">
+            <img src="./images/img-2.jpg" alt="" width="220">
+            <div class="details">
+                <h3>Office shirt</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <div class="price-quantity">
+                    <h2>$ 100</h2>
+                    <div class="buttons">
+                        <i class="bi bi-dash"></i>
+                        <div class="quantity">0</div>
+                        <i class="bi bi-plus-lg"></i>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="item">
+            <img src="./images/img-3.jpg" alt="" width="220">
+            <div class="details">
+                <h3>T shirt</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <div class="price-quantity">
+                    <h2>$ 25</h2>
+                    <div class="buttons">
+                        <i class="bi bi-dash"></i>
+                        <div class="quantity">0</div>
+                        <i class="bi bi-plus-lg"></i>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="item">
+        <img src="./images/img-4.jpg" alt="" width="220">
+        <div class="details">
+            <h3>Mens suit</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="price-quantity">
+                <h2>$ 300</h2>
+                <div class="buttons">
+                    <i class="bi bi-dash"></i>
+                    <div class="quantity">0</div>
+                    <i class="bi bi-plus-lg"></i>
+                       
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+// 4. code
+
+let generateshop =()=> {
+    
+    return (shop.innerHTML = shopItemsData.map((x)=>{
+        return `
+        <div class="item">
+            <img src="./images/img-1.jpg" alt="" width="220">
+            <div class="details">
+                <h3>casual shirt</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <div class="price-quantity">
+                    <h2>$ 45</h2>
+                    <div class="buttons">
+                        <i class="bi bi-dash"></i>
+                        <div class="quantity">0</div>
+                        <i class="bi bi-plus-lg"></i>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+    `;
+    }).join(""));
+    
+
+};
+
+generateshop();
+
+
+
+//5. data inserted code
+
+let generateshop =()=> {
+    
+    return (shop.innerHTML = shopItemsData
+        .map((x)=>{
+        return `
+        <div class="item">
+            <img src="./images/img-1.jpg" alt="" width="220">
+            <div class="details">
+
+                <h3>${x.name}</h3>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <div class="price-quantity">
+
+                    <h2>$ ${x.price}</h2>
+
+                    <div class="buttons">
+                        <i class="bi bi-dash"></i>
+                        <div class="quantity">0</div>
+                        <i class="bi bi-plus-lg"></i>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+    `;
+    }).join(""));
+    
+
+};
+
+generateshop();
+
+
+//6. map include  dataitems code
+
+
+let generateshop =()=> {
+    
+    return (shop.innerHTML = shopItemsData
+        .map((x)=>{
+
+            let {id,name,price,desc,img} = x
+            
+        return `
+        <div class="item">
+            <img src="./images/img-1.jpg" alt="" width="220">
+            <div class="details">
+
+                <h3>${x.name}</h3>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <div class="price-quantity">
+
+                    <h2>$ ${x.price}</h2>
+
+                    <div class="buttons">
+                        <i class="bi bi-dash"></i>
+                        <div class="quantity">0</div>
+                        <i class="bi bi-plus-lg"></i>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+    `;
+    }).join(""));
+    
+
+};
+
+generateshop();  always above 5 code same work 
+
+
+//7 above code x inside remove same work
+
+let generateshop =()=> {
+    
+    return (shop.innerHTML = shopItemsData
+        .map((x)=>{
+
+            let {id,name,price,desc,img} = x
+            
+        return `
+        <div class="item">
+            <img src="./images/img-1.jpg" alt="" width="220">
+            <div class="details">
+
+
+                <h3>${name}</h3>    ------x remove work
+
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <div class="price-quantity">
+
+                    <h2>$ ${price}</h2>   ---x remove work
+
+                    <div class="buttons">
+                        <i class="bi bi-dash"></i>
+                        <div class="quantity">0</div>
+                        <i class="bi bi-plus-lg"></i>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+    `;
+    }).join(""));
+    
+
+};
+
+generateshop();
+
+
+
+//8 img id,desc, img,pricechnging code
+
+let generateshop =()=> {
+    
+    return (shop.innerHTML = shopItemsData
+        .map((x)=>{
+
+            let {id,name,price,desc,img} = x;
+            
+        return `
+        <div id=product-id-${id} class="item">---id change
+            
+            <img src= ${img} alt="" width="220">
+            <div class="details">
+
+                <h3>${name}</h3>
+
+                <p>${desc}</p>
+                <div class="price-quantity">
+
+                    <h2>$ ${price}</h2>
+
+                    <div class="buttons">
+                        <i class="bi bi-dash"></i>
+                        <div id=${id} class="quantity">0</div>--id change
+                        <i class="bi bi-plus-lg"></i>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+    `;
+    }).join(""));
+    
+
+};
+
+generateshop();
+
+
+
+
+//9 increment and decrement code this section
+
+
+let increment = () =>{
+    console.log("increment");
+};
+
+let decrement = () =>{
+    console.log("decrement");   
+};
+let update = () =>{};
+
+
+
+//10 buttons increment decrement code
+
+<div class="buttons">
+    <i onclick="decrement()" class="bi bi-dash"></i>
+     <div  id=${id} class="quantity">0</div>
+     <i onclick="increment()" class="bi bi-plus-lg"></i>
+                           
+ </div>
+
+
+//11 unique id setting buttons work code
+<div class="buttons">
+                        <i onclick="decrement(${id})" class="bi bi-dash"></i>
+                        <div onclick="update(${id})" id=${id} class="quantity">0</div>
+                        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+    `;
+    }).join(""));
+    
+
+};
+
+generateshop();
+
+
+let increment = () =>{
+    console.log("increment");
+};
+
+let decrement = () =>{
+    console.log("decrement");   
+};
+let update = () =>{
+    console.log("update");  
+};
+
+
+//12 id implementing increment and decrement code
+
+
+
+<div class="buttons">
+                        <i onclick="decrement(${id})" class="bi bi-dash"></i>
+                        <div onclick="update(${id})" id=${id} class="quantity">0</div>
+                        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+    `;
+    }).join(""));
+    
+
+};
+
+generateshop();
+
+
+let increment = (id) =>{
+    console.log(id);
+};
+
+let decrement = (id) =>{
+    console.log(id);   
+};
+let update = (id) =>{
+    console.log(id);  
+};
+
+// the coding click increment and decrement coding show id 
+
+
+
+//13  the unique id only showing code increment and decrement 
+
+ let increment = (id) =>{
+    let selectedItem =id;
+    console.log(selectedItem.id);
+};
+
+let decrement = (id) =>{
+    let selectedItem =id;
+    console.log(selectedItem.id);   
+};
+let update = (id) =>{
+      
+};
+
+
+//14 next let shop general function above create basket coding
+
+and the + and - specifically pin point  selecting javascript create the basket code this purpose
+and every time selecting any card would specifically stored the datas in the basket
+code 
+
+basket[{inside datas can declare the object}]
+
+
+everytime the user select increment code
+include push code
+
+
+let generateshop above include the codes
+
+let basket = []; and the increment code include(basket.push) code
+
+let increment = (id) =>{
+    let selectedItem =id;
+    
+
+    basket.push({
+        id :selectedItem,
+        item:1,
+    })
+    console.log(basket);
+};
+
+the codecan run and inspect click shows one iten can store in  the array format 
+in the increment code 
+
+eg:
+the code
+           [{…}]
+           [{…}]
+0
+: 
+{id: 'dxwjhwkk', item: 1}
+length
+: 
+1
+[[Prototype]]
+: 
+Array(0)
+
+
+every time click increment the datas stired in id 
+) [{…}, {…}, {…}, {…}]0: {id: 'dxwjhwkk', item: 1}1: {id: 'dxwjhwkk', item: 1}2: {id: 'hdbqidjq', item: 1}3: {id: 'dxwjhwkk', item: 1}length: 4[[Prototype]]: Array(0)
+main.js:110 (5) [{…}, {…}, {…}, {…}, {…}]0: {id: 'dxwjhwkk', item: 1}1: {id: 'dxwjhwkk', item: 1}2: {id: 'hdbqidjq', item: 1}3: {id: 'dxwjhwkk', item: 1}4: {id: 'hdbqidjq', item: 1}length: 5[[Prototype]]: Array(0)
+
+
+
+
+
+
+
+
+
+//15 the pushfunctionafterinclude the search codeinside the increment
+
+the searching one reason for include the code the search find code it can declare pus  cod e above increment code
+
+
+let search = basket.find((x) => x.id ===selectedItem.id);---use the code for searching the product inthe code canuse esi arrow function
+
+-- quick search reason will use 
+
+
+you can dont select the product the undefinedcode will work and doesnt select nd  one one morething the datas are push in the basket
+
+code...
+
+   incase the product undefined the if part work may be search product else part will run
+
+
+   let increment = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id ===selectedItem.id);
+
+    if (search === undefined){
+
+     basket.push({
+        id:selectedItem.id,
+        item:1,   
+    });
+
+    } else{
+        search.item +=1;
+
+    }
+    
+    console.log(basket);
+};
+
+
+the inspect code one iten store
+
+[{…}]
+0
+: 
+{id: 'dxwjhwkk', item: 1}
+length
+: 
+1
+[[Prototype]]
+: 
+Array(0)
+
+
+//16 same as decrement code and else part will declare 
+
+let selectedItem =id;
+    
+    let search = basket.find((x) => x.id ===selectedItem.id);
+
+    let decrement = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id ===selectedItem.id);
+
+    if (search.item === 0) return;
+
+    else{
+     search.item -=1;
+  
+    }
+    
+    console.log(basket);
+};
+
+
+//18 update cod initaialise and update can include increment and decrement also
+
+let update = () => {
+    console.log("the update function is running");
+};
+
+update can include increment and decrement code this is below
+
+let increment = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id ===selectedItem.id);
+
+    if (search === undefined){
+
+    basket.push({
+        id:selectedItem.id,
+        item:1,   
+    });
+
+    } else{
+        search.item +=1;
+  
+    }
+    
+    console.log(basket);
+    update();
+};
+
+let decrement = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id ===selectedItem.id);
+
+    if (search.item === 0) return;
+
+    else{
+     search.item -=1;
+  
+    }
+    
+    console.log(basket);
+    update();
+};
+let update = () => {
+    console.log("the update function is running");
+};//
+
+inspect output
+     main.js:118 [{…}]
+main.js:138 the update function is running
+main.js:118 [{…}]
+main.js:138 the update function is running
+main.js:118 [{…}]
+main.js:138 the update function is running
+main.js:118 [{…}]
+main.js:138 the update function is running
+main.js:134 [{…}]
+main.js:138 the update function is running
+main.js:134 [{…}]
+main.js:138 the update function is running
+
+
+
+
+//19  increment & decrement update (inside include selected item) and  update code can include id this code only change update increment and update code not toimplement decrement
+
+this code
+
+   let increment = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id ===selectedItem.id);
+
+    if (search === undefined){
+
+    basket.push({
+        id:selectedItem.id,
+        item:1,   
+    });
+
+    } else{
+        search.item +=1;
+  
+    }
+    
+    console.log(basket);
+    update(selectedItem.id);
+};
+
+let decrement = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id ===selectedItem.id);
+
+    if (search.item === 0) return;
+
+    else{
+     search.item -=1;
+  
+    }
+    
+    console.log(basket);
+    update();
+};
+let update = (id) => {
+    console.log(id);
+};
+
+//output 
+
+unique id  provide   <div id=sjwqkdjwq>
+
+
+//20 same as include esi arrow function include nd the search .find can include and the 
+
+
+//increment and decrement
+ console.log(basket); can comment output this section
+
+
+ both increment & decrement comment but the 
+
+ increment update(selectedItem.id) only initaialise
+ decrement can not fill update()
+
+ this time can output show increment click inspect
+
+     
+main.js:137 {id: 'dxwjhwkk', item: 2}  -- object based increment code work 
+
+but decrement click not work 
+  
+  undefined can show this part
+
+
+// 21 the update code can include 
+
+  console.log(search.item)  --this time shows only
+
+   item numbers only 
+
+eg:
+
+ let update = (id) => {
+    let search = basket.find((x) => x.id === id);
+    console.log(search.item);
+};
+
+//output only values can show
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+
+//22 after update code can include the document .get element by id include 
+
+eg :
+
+ let update = (id) => {
+    let search = basket.find((x) => x.id === id);
+    console.log(search.item);
+
+    document.getElementById(id).innerHTML =search.item;
+};
+
+//this code include after the increment will work 
+
+
+eg  - 0 + (- 0 +1)--- increment is work.
+
+
+
+//after the decrement code work 
+
+decrement code
+
+update(selectedItem.id)---the decrementalso work
+
+eg: (- 0 +)  (1 0 2) ----decrement is also work.
+
+
+
+
+
+
+
+
+
+
+//24 the complete increment decrement update code can listed below
+
+let increment = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id ===selectedItem.id);
+    if (search === undefined){
+
+    basket.push({
+        id:selectedItem.id,
+        item:1,   
+    });
+
+    } else{
+        search.item +=1;
+  
+    }
+    
+    //console.log(basket);
+    update(selectedItem.id);
+};
+
+let decrement = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id ===selectedItem.id);
+    if (search.item === 0) return;
+
+    else{
+     search.item -=1;
+  
+    }
+    
+    //console.log(basket);
+    update(selectedItem.id);
+};
+let update = (id) => {
+    let search = basket.find((x) => x.id === id);
+    console.log(search.item);
+
+    document.getElementById(id).innerHTML =search.item;
+};
+
+// 24 after the cart can work code increment and decrement code include
+
+using calculation esi arrow function
+
+the calculation function work is both calculation and update so update can include
+
+calculation is necessary
+
+//code.............
+
+......the update aand calculation part includethis code.....
+
+let update = (id) => {
+    let search = basket.find((x) => x.id === id);
+    
+   // console.log(search.item);
+
+    document.getElementById(id).innerHTML =search.item;
+
+    calculation()
+};
+
+
+let calculation = () =>{
+
+    console.log ("calculation is still running")
+} 
+
+calculation()
+
+
+
+
+//output
+
+ calculation is still running
+ calculation is still running
+
+
+
+ // 25 next goto index.html cart amount can include using 
+
+ document.get element code can include inside calculation code 
+
+ code.....
+
+
+     let calculation = () =>{
+
+    let cartIcon = document.getElementById("cartAmount");
+
+    cartIcon.innerHTML =100;
+} 
+
+output.
+//... the code  can display cart head 100not change;
+
+
+
+//26 the change the cart code
+
+....then code change  the calculation...
+
+the carticon code change the use 
+   
+   console.log(basket);
+
+let calculation = () =>{
+
+    let cartIcon = document.getElementById("cartAmount");
+
+    console.log(basket)
+
+    
+} 
+
+//output................
+
+     main.js:150 Array(0)
+main.js:150 [{…}]0: {id: 'hdbqidjq', item: 1}length: 1[[Prototype]]: Array(0)
+main.js:150 (2) [{…}, {…}]
+main.js:150 (2) [{…}, {…}]
+main.js:150 (2) [{…}, {…}]
+main.js:150 (2) [{…}, {…}]
+main.js:150 (2) [{…}, {…}]0: {id: 'hdbqidjq', item: 1}1: {id: 'dxwjhwkk', item: 5}length: 2[[Prototype]]: Array(0)
+
+
+//27 the calculation code console can include map function  esi arrow code 
+shows only items in numbers 
+
+
+code
+
+
+...
+
+    let calculation = () =>{
+
+    let cartIcon = document.getElementById("cartAmount");
+
+    console.log(basket.map((x)=>x.item));
+};
+
+
+//output
+
+
+
+main.js:150 [1]
+main.js:150 [2]
+main.js:150 [3]
+main.js:150 [4]    --- array based only numbers only showed.
+
+
+//27 calculation coding
+
+
+.....code
+
+
+   let calculation = () =>{
+
+    let cartIcon = document.getElementById("cartAmount");
+
+    console.log(basket.map((x)=>x.item).reduce((x,y)=> x+y,0));
+};
+
+calculation()
+
+
+this code console.log(basket.map((x)=>x.item).reduce((x,y)=> x+y,0));
+
+x,y x-is previous number  and y is another numberit can add and process 
+
+x+y 0 is a common iterative usingdefult procees
+
+
+//output this code increment and decrement
+
+
+index.html:56 Live reload enabled.
+main.js:150 0
+main.js:150 1
+main.js:150 2
+main.js:150 3
+main.js:150 4
+main.js:150 5
+main.js:150 6
+main.js:150 7
+main.js:150 8
+main.js:150 9
+main.js:150 8
+main.js:150 7
+main.js:150 6
+main.js:150 5
+main.js:150 4
+
+
+//28 then after the console code clculation can change the cart icon inside
+
+
+let calculation = () =>{
+
+    let cartIcon = document.getElementById("cartAmount");
+
+    cartIcon.innerHTML = basket.map((x)=>x.item).reduce((x,y)=> x+y,0)
+    
+};
+
+calculation()
+
+
+//console can alter and focus cart cardwork so this code change
+
+
+...........especially this line code
+   
+   cartIcon.innerHTML = basket.map((x)=>x.item).reduce((x,y)=> x+y,0)
+    
+
+// 28 calculation code carticon workis ok but the page referesh is 
+
+totally remove this problemcan solve the using local storage in computer 
+
+so  this can focus this stage
+
+
+//29 increment code can include local storage code above the  update code
+
+localStorage.setItem("data");
+
+  
+  ---- using local storage 
+
+
+  this output inspect
+
+  key-----values
+
+  data--- []
+
+
+  localStorage.setItem("data",basket); basket is object and can display the 
+  inspect clickthe + 
+
+  show [object,object]
+
+
+  //30 after can local storage can include json code this session
+
+
+  localStorage.setItem("data",JSON.stringify(basket));
+
+
+  this code after inspect displays 
+
+   data      [jhfhwhdwkd]
+
+   data click show some items increment 
+
+   //output inspect
+
+   {id: "dxwjhwkk", item: 10}]
+0
+: 
+{id: "dxwjhwkk", item: 10}
+id
+: 
+"dxwjhwkk"
+item
+: 
+10
+
+
+  but only increment codecan only work decrement code not data store sothis problemcansolve below code
+
+
+because the localstorage can only implemented in increment sowe will add 
+
+decrement in local storage can also work.
+
+
+
+//31  decrement local storage
+
+localStorage.setItem("data",JSON.stringify(basket)); 
+
+ same as decrement update above paste the code cn inspect work
+
+
+
+ d: "dxwjhwkk", item: 5}]
+0
+: 
+{id: "dxwjhwkk", item: 5}   decrement will work..
+
+
+
+//32 this time can icrement aand decrement codecan work but  refersh the page 
+the cart will referesh and datas are stored in localstorage work 
+
+...code inspect local storagedata 
+
+
+....output
+
+             
+[{id: "dxwjhwkk", item: 14}]
+0
+: 
+{id: "dxwjhwkk", item: 14}
+
+
+
+//35 but the reresh time no data clearis must so this process can include
+the code
+
+top code 
+
+
+let basket []; coming work.
+
+
+but  this code let basket []--array will remove 
+
+use 
+
+
+...  json.parse codeand include local storage nd include get item 
+previousthe increment and decrement can use 
+
+set item in local storage but this timeuse get item belowthe code see the reference.
+
+// code 
+
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+this code using the symbol 
+
+   ||-------or symbol 
+    and after can use the array []
+
+
+    ..this || statement (or) and empty error can incaseany error and the time 
+    the prvent the application purposecan usethe code
+
+
+
+//36 this code can include quick search  purpose inside the 
+
+let generateshop code ....
+
+ let search = basket.find((x) => x.id === id)|| [];
+
+
+ ..code
+  
+    let generateshop =()=> {
+    
+    return (shop.innerHTML = shopItemsData
+        .map((x)=>{
+
+            let {id,name,price,desc,img} = x;
+
+            let search = basket.find((x) => x.id === id)|| [];
+
+
+
+//// thsi code use main purpose search any return dont search return empty array 
+
+and prevent errors &  using the || [] (OR and empty array code) 
+
+
+//38 afterthe search quick can include the 
+
+cart0 
+
+...code   <div  id=${id} class="quantity">0</div> 
+
+this code change this code
+
+........<div  id=${id} class="quantity">${search}</div>----thiscode.......
+
+
+<div class="buttons">
+<i onclick="decrement(${id})" class="bi bi-dash"></i>
+<div  id=${id} class="quantity">
+
+${search}
+
+</div>.............this code can include the 0 alter 
+
+
+
+
+// this code include after the inspect output
+
+
+0
+: 
+{id: "dxwjhwkk", item: 7}
+1
+: 
+{id: "hdbqidjq", item: 0}
+
+
+//38   this time you can search anything return item but dont search
+
+return undefinedthis code include below.
+
+code ..
+
+        ${search.item === undefined? 0: search.item} ---this code
+
+  <div class="buttons">
+<i onclick="decrement(${id})" class="bi bi-dash"></i>
+<div  id=${id} class="quantity">
+
+ ${search.item === undefined? 0: search.item}
+
+ </div>
+
+
+
+// but this code can work but refresh only cart increment not refresh but above cart
+can refresh this probem can solve below the code
+
+
+
+
+
+///0.39   this time refersh problem cart top code include this session
+
+this problem solve every time load include the code
+
+
+using the calculation code 
+
+calculation code outside declare teh function 
+
+also work...
+
+
+code
+
+let calculation = () =>{
+
+    let cartIcon = document.getElementById("cartAmount");
+
+    cartIcon.innerHTML = basket.map((x)=>x.item).reduce((x,y)=> x+y,0)
+    
+};
+
+calculation(); 
+
+
+
+
+// this time the page will refersh no increment and
+ decrement numbers refershit can displyed theproblemis solve ok.
+
+
+
+ /// but every time the inspect will clear the data and after check 
+
+ decrement in the time show some error because the basket willempty the
+
+ problemsolve use the code 
+
+
+ before decrement problem code 
+
+
+ ...code
+     
+      let decrement = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id === selectedItem.id);
+    if (search.item === 0) return;
+
+    else{
+     search.item -=1;
+  
+    }
+     
+    localStorage.setItem("data",JSON.stringify(basket));
+
+    //console.log(basket);
+    update(selectedItem.id);
+};
+
+
+after changethe correect code .....
+
+
+
+let decrement = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id === selectedItem.id);
+
+    if(search === undefined) return;   - this line changing
+    else if (search.item === 0) return;  --this line channging bfore code
+
+    else{
+     search.item -=1;
+  
+    }
+     
+    localStorage.setItem("data",JSON.stringify(basket));
+
+    //console.log(basket);
+    update(selectedItem.id);
+};
+
+
+
+///39 the after go the changing code in inspect console 
+
+
+theirnot show any error ok this problem solve
+
+
+
+
+
+//40 next move another problem 
+
+
+click the inspect button  and click decrement data - shows error
+
+ok inspect item 0 code
+
+
+[{id: "dxwjhwkk", item: 1}, {id: "hdbqidjq", item: 0}]
+0
+: 
+{id: "dxwjhwkk", item: 1}
+1
+: 
+{id: "hdbqidjq", item: 0} 
+
+
+this can retify apply some code
+
+
+//41 include decrement apply filter code
+
+
+this code can extra add the decrement code 
+
+ code....
+
+    basket =basket.filter((X) => X.item !== 0);
+
+
+ note :   the filter functions returnsthe filter data 
+
+
+ after the local storage code can cut and paste  the 
+ 
+    decrement  update()code  below ok .
+
+
+    localStorage.setItem("data",JSON.stringify(basket)); this code put
+
+below mian reason basket code after local storage runis so nice this is necessary for 
+java script so this methodcan apply 
+
+and the  code can given below:
+
+
+code...............
+
+let decrement = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id === selectedItem.id);
+
+    if(search === undefined) return;
+    else if (search.item === 0) return;
+
+    else{
+     search.item -=1;
+  
+    }
+     
+    
+
+    basket =basket.filter((X) => X.item !== 0);
+
+    //console.log(basket);
+    update(selectedItem.id);
+
+    localStorage.setItem("data",JSON.stringify(basket));
+
+    
+};
+
+this is filterapply basket code for the decrement work.
+
+
+
+//41 in the same way increment will apply the code 
+
+let increment = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id ===selectedItem.id);
+    if (search === undefined){
+
+    basket.push({
+        id:selectedItem.id,
+        item:1,   
+    });
+
+    } else{
+        search.item +=1;
+  
+    }
+    
+    //console.log(basket);
+
+    
+    
+
+    update(selectedItem.id);
+
+    localStorage.setItem("data",JSON.stringify(basket));
+
+}; this is ths increment code for after put local storage code.
+
+
+
+//41 this code can data click but the increment and decrementwork but the 
+
+decrement should less zero but the item data can show 1 
+
+output inspection
+
+
+0
+: 
+{id: "dxwjhwkk", item: 1}..................show 
+: 
+{id: "hdbqidjq", item: 2}
+2
+: 
+{id: "dwdhiwidjw", item: 2}
+3
+: 
+{id: "djwdkqpdpq", item: 2}
+
+ok still the coding can change  the decrement code again
+
+
+43// code decrement change again
+
+let decrement = (id) =>{
+    let selectedItem =id;
+    
+    let search = basket.find((x) => x.id === selectedItem.id);
+
+    if(search === undefined) return;
+    else if (search.item === 0) return;
+
+    else{
+     search.item -=1;
+  
+    }
+     
+    
+    update(selectedItem.id);
+    
+    basket =basket.filter((X) => X.item !== 0);
+
+    //console.log(basket);
+    
+
+    localStorage.setItem("data",JSON.stringify(basket));
+
+
+}; 
+
+// this code can mainly change the 0 comes the object will deleted
+
+and the update(selectedItem.id) code will put paste above on filter code 
+
+code:....................
+
+   update(selectedItem.id);
+    
+    basket =basket.filter((X) => X.item !== 0);
+
+    //console.log(basket);
+
+
+
+//inspect output
+   
+   item will 1 show the item
+     
+     [{id: "hdbqidjq", item: 2}, {id: "dwdhiwidjw", item: 2}, {id: "djwdkqpdpq", item: 2},…]
+0
+: 
+{id: "hdbqidjq", item: 2}
+1
+: 
+{id: "dwdhiwidjw", item: 2}
+2
+: 
+{id: "djwdkqpdpq", item: 2}
+3
+: 
+{id: "dxwjhwkk", item: 1} ...............item will 1 show the item
+
+
+
+//decrement the 0 the item
+will deleted
+
+decrement before
+
+
+ [{id: "hdbqidjq", item: 2}, {id: "dwdhiwidjw", item: 2}, {id: "djwdkqpdpq", item: 2},…]
+0
+: 
+{id: "hdbqidjq", item: 2}
+1
+: 
+{id: "dwdhiwidjw", item: 2}
+2
+: 
+{id: "djwdkqpdpq", item: 2}
+3
+: 
+{id: "dxwjhwkk", item: 1}     decrement before show -1 
+
+
+but decrement comes 0 
+
+the item will delted 
+
+code
+
+
+     the code is remove in stage 
+       {id: "dxwjhwkk", item: 1}  remove the localStoragestorage not seen.
+
+
+
+ [{id: "hdbqidjq", item: 2}, {id: "dwdhiwidjw", item: 2}, {id: "djwdkqpdpq", item: 2},…]
+0
+: 
+{id: "hdbqidjq", item: 2}
+1
+: 
+{id: "dwdhiwidjw", item: 2}
+2
+: 
+{id: "djwdkqpdpq", item: 2}
+3
+: 
+
+
+   
+
+
+ ...... ok finally all code clearly explain and typed it explain
+ briefly.
+ 
+ 
+      
+
+
+........................THANKING YOU ...........................................
+
+
+<<<<<@ ||  ALL rights reservedby V.Renu vijay 2024   ||  >>>>>
+
+
+
+
+
+
+
+
+
+
+ 
+let basket 

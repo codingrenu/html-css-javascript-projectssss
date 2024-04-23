@@ -1,0 +1,1097 @@
+
+// 01. cart can first copy the json parse because the local storage can pulling
+the datas from the local storage stored so first declare the code
+
+code.....
+
+    let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+    console.log(basket);
+
+code.......
+
+this code firstly run inspectand can show
+
+array inside object stored the code of inspect page inside
+
+code...
+
+       [{…}]
+0
+: 
+{id: 'dxwjhwkk', item: 11}
+length
+: 
+1
+[[Prototype]]
+: 
+Array(0)
+
+theobject can stored 11 items but he cart can show empty this problems retify
+
+using the code in the main.js calculationcode use is to retify
+
+//2  calculation code
+
+the code implement after bothcart pgeand mainpage dont change in the cart item numbers
+
+code....
+
+
+let calculation = () =>{
+
+    let cartIcon = document.getElementById("cartAmount");
+
+    cartIcon.innerHTML = basket.map((x)=>x.item).reduce((x,y)=> x+y,0)
+    
+};
+
+calculation(); 
+
+
+note 03/// 
+
+main reaosn for creating the label class and shoping cart class
+    it mainly used for cart page
+    
+        checkout, and clearchat designing purpose  in html
+
+        it can get the variable name can use the cart class starting code
+
+code......
+
+let label = document.getElementById('shop');
+
+let shoppingcart = document.getElementById('shopping-cart');   
+
+
+this time cart code 
+
+
+code............. 
+
+
+let label = document.getElementById('shop');
+
+let shoppingcart = document.getElementById('shopping-cart');
+
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+console.log(basket);
+
+
+let calculation = () =>{
+
+    let cartIcon = document.getElementById("cartAmount");
+
+    cartIcon.innerHTML = basket.map((x)=>x.item).reduce((x,y)=> x+y,0)
+    
+};
+
+calculation(); 
+
+
+
+
+
+           
+//04.next the cart page cart picture and amout code can include
+
+this reason will use 
+
+the code
+
+below the cart js code calculation below create 
+
+use the esi arrow function 
+
+
+let generateCartItems = () =>{
+
+    //the function can mainly use data on the basket code and non data aon the 
+    basket code use
+}
+
+code................... 
+
+data in or not may be use the if else statement code 
+below
+
+code://
+
+let generateCartItems = () =>{
+
+    if(basket.length!==0){
+        console.log("basket is not empty);
+    }
+
+    else{
+        console.log("basket is totally empty");
+    }
+}
+generateCartItems()  -- after the generatecart itmems can invoke is necessary
+
+output//
+
+      basket is not empty    
+      
+       and refresh the cart pagee and go toapplictionafter 
+      delete dtas and again go to console 
+
+      displays 
+             basket is totally  empty shows
+      
+                       ....if else code 
+
+
+//0.4   then the if else is workbut the code can change because the shop items 
+and datas are connected using same wy main.js 
+like 
+
+///using the map functions and ifelse change  the inde.html label codes use
+
+
+
+let generateCartItems = () => {
+
+  if(basket.length !== 0) {
+
+  }
+  
+  else {
+    ShoppingCart.innerHTML = ``;
+    label.innerHTML = `
+    <h2>Cart is Empty</h2>
+    <a href="cart.html">
+     <button class="HomeBtn">Back to home</button>
+    </a> 
+    
+    `;
+  }
+};
+
+generateCartItems();
+
+
+
+
+
+this code can not display because not showing buttons in the cart page so
+
+in the  reason
+
+
+let generateCartItems = () => {
+
+  if(basket.length !== 0) {
+
+  }
+
+
+if statement !==0 in the reason so solve 
+
+
+if(basket.length !== 0) ( this codeyet not complete so dont workimpleme)nt 
+some work it cn listed below
+
+
+
+    
+}
+
+
+
+ 
+
+
+//05 ...these code runs oder by oder and datas are arranded oder by order
+
+eg inspect output
+
+cart can show top-16 
+and datas can show local storage 
+
+these code
+
+    [{id: "dxwjhwkk", item: 10}, {id: "hdbqidjq", item: 6}]
+0
+: 
+{id: "dxwjhwkk", item: 10}
+
+: 
+{id: "hdbqidjq", item: 6}
+
+
+//06 then use the map functions it can use the datasare arranged by the order
+based
+
+
+    return ShoppingCart.innerHTML  = basket.map((x)=>
+
+code ....this outputof data can stored in local storage it oder by one by one 
+using map function.
+    
+{id: "dxwjhwkk", item: 10}
+1
+: 
+{id: "hdbqidjq", item: 6}
+2
+: 
+{id: "dwdhiwidjw", item: 2}
+3
+: 
+{id: "djwdkqpdpq", item: 1}
+
+
+
+and the ouput div based 4 times run because thediv insidehellowritten 
+
+and 4 cards this reason will be four times displayed
+
+
+cartpage output:
+
+HELLO
+HELLO
+HELLO
+HELLO
+
+
+incase the any one card will decrease 0item then show three hello in 
+the cart page 
+
+cartpage output:
+
+HELLO
+HELLO
+HELLO
+
+
+
+then problem all hello below it willsolve using join function
+
+hello before
+
+HELLO
+,
+HELLO
+,
+HELLO
+,
+
+THIS solve using join using 
+
+single nd double comma use inside paranthesis eg: join(" "), join(' ').
+
+
+let generateCartItems = () => {
+
+  if(basket.length !== 0) {
+
+    return ShoppingCart.innerHTML  = basket.map((x)=>{
+
+      return `
+
+      <div class="cart-item">
+      <img src=
+      </div>
+
+
+      `;
+    })
+    .join(""));
+
+
+
+
+
+
+hello after.....
+
+HELLO
+
+HELLO
+
+HELLO
+
+
+
+//06 the div inside  can code change reason willbe use image necessity 
+so it can use the image code 
+
+
+and before implement image code check the cart page cart before data implement 
+is necessity
+
+check
+
+<script src="src/Data.js"></script>
+<script src="src/cart.js"></script>
+
+
+its ok then go to cart.js 
+
+
+and implment page top 
+
+
+
+console .log(shopItemsData)
+
+
+
+the go to inspect console 
+
+
+show....
+
+
+
+
+
+cart.js:8 (4) [{…}, {…}, {…}, {…}]0: 
+{id: 'dxwjhwkk', name: 'casual shirt', price: 45, 
+desc: 'Lorem ipsum dolor sit amet consectetur adipisicing.',
+ img: 'images/img-1.jpg'}desc: "Lorem ipsum dolor sit amet consectetur adipisicing."id: "dxwjhwkk"img: "images/img-1.jpg"name: "casual shirt"price: 45[[Prototype]]: Object1: {id: 'hdbqidjq', name: 'Office shirt', price: 100, desc: 'Lorem ipsum dolor sit amet consectetur adipisicing.', img: 'images/img-2.jpg'}2: {id: 'dwdhiwidjw', name: 'T shirt', price: 25, desc: 'Lorem ipsum dolor sit amet consectetur adipisicing.', img: 'images/img-3.jpg'}3: {id: 'djwdkqpdpq', name: 'Mens suit', price: 300, desc: 'Lorem ipsum dolor sit amet consectetur adipisicing.', img: 'images/img-4.jpg'}length: 4[[Prototype]]: Array(0)
+cart.js:13 (3) [{…}, {…}, {…}]0:
+ {id: 'hdbqidjq', item: 6}1: {id: 'dwdhiwidjw', item: 2}2: 
+ {id: 'djwdkqpdpq', item: 1}length: 3[[Prototype]]: Array(0)
+
+these based output  array based show to all items
+
+
+code 
+let label = document.getElementById('shop');
+
+let ShoppingCart = document.getElementById('shopping-cart');
+
+
+console.log(shopItemsData);.....this code
+
+
+
+
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+console.log(basket);
+
+
+
+
+
+
+//06 the the console.log("shopItems Data") the move  inside the if code
+
+below the map function code because the map inside map((x)) is a object 
+
+then console.log("shopItems Data") it related to x so use x
+
+code ...
+
+(3) [{…}, {…}, {…}]0: {id: 'hdbqidjq', item: 6}
+id: "hdbqidjq"item: 6[[Prototype]]: Object1: 
+{id: 'dwdhiwidjw', item: 2}id: "dwdhiwidjw"item: 
+
+
+2[[Prototype]]: Object2: {id: 'djwdkqpdpq', item: 1}id: "djwdkqpdpq"item: 1[[Prototype]]: Objectlength: 3[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+cart.js:33 {id: 'hdbqidjq', item: 6}id: "hdbqidjq"item: 6[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+cart.js:33 {id: 'dwdhiwidjw', item: 2}id: "dwdhiwidjw"item: 2[[Prototype]]: Object
+cart.js:33 {id: 'djwdkqpdpq', item: 1}
+
+
+this time x object can only show items and id 
+
+
+eg:
+
+  id: iwidjw', item: 2}...this line
+
+
+//07 the it will show datas only id and items the iamge will include next set of code 
+
+the id  and items can store some variables code using esiarrow function
+
+
+
+code 
+
+let {id,item}=x;
+let search =shopItemsData.find((y) => y.id ===id) || [];
+
+search my reson will choose serch.find 
+
+
+find(y)
+is a shop data items and y.idis varaiable decalre
+
+|| [] some thing find some results ornot find return empty Array
+
+this reason will choose.
+
+then image code use insideif statement....
+
+
+
+code......
+
+
+
+    let generateCartItems = () => {
+
+  if(basket.length !== 0) {
+
+    return ShoppingCart.innerHTML  = basket
+    .map((x) => {
+
+      console.log(x);
+
+      let {id,item}=x;
+      let search =shopItemsData.find((y) => y.id ===id) || [];
+
+
+      return `
+
+      <div class="cart-item">
+      <img src = ${search.img} alt="" />
+      </div>
+
+
+      `;
+    })
+    .join('');   these include 
+
+
+    let {id,item}=x;
+    let search =shopItemsData.find((y) => y.id ===id) || [];
+
+    
+    <div class="cart-item">
+
+    <img src = ${search.img} alt="" />
+    </div>
+
+
+after showing cart page outputs four outputs show large size.andshows allimages
+
+
+the it will reduce some image width it will solve
+
+
+
+<img src = ${search.img} alt="" /  width = "100">
+
+
+the cart page show three images reason the local storage can store three 
+datas 
+
+the casual shirt is missing 
+
+
+
+// inspect data local storage datas:
+
+
+
+[{id: "hdbqidjq", item: 6}, {id: "dwdhiwidjw", item: 2}, {id: "djwdkqpdpq", item: 1}]
+0
+: 
+{id: "hdbqidjq", item: 6}
+1
+: 
+{id: "dwdhiwidjw", item: 2}
+2
+: 
+{id: "djwdkqpdpq", item: 1}
+
+reason three cards can select some itms 
+
+
+in the time fourcrds select so fourimage disply in cart page
+
+
+//inspect output  this time four datas...
+
+[{id: "hdbqidjq", item: 6}, {id: "dwdhiwidjw", item: 2}, {id: "djwdkqpdpq", item: 1},…]
+0
+: 
+{id: "hdbqidjq", item: 6}
+1
+: 
+{id: "dwdhiwidjw", item: 2}
+2
+: 
+{id: "djwdkqpdpq", item: 1}
+3
+: 
+{id: "dxwjhwkk", item: 4}
+
+
+in the need based select items so picture in cart page.display .
+
+
+//08. the cart page serch name price x symbol price code html can use the cart.js
+page
+
+code...
+
+
+
+<div class="details">
+
+    <div class="title-price-x"></div>
+     
+      <h4>
+
+         <p>${search.name}</p>
+
+      </h4>
+        
+      <i class="bi bi-x-lg"></i>
+
+    <div class="cart-buttons"></div>
+
+    <h3></h3>
+</div>
+
+
+the code can display some results
+
+eg: price productname eg: office,casual shirt these based.
+
+
+
+
+//09  the results shows evenly  look bad visible so add some styles  it looks 
+like better visible.
+
+
+0 10
+ ifelse can add some html codes and datajs code increment and decrement
+
+ let generateCartItems = () => {
+
+  if(basket.length !== 0) {
+
+    return ShoppingCart.innerHTML  = basket
+    .map((x) => {
+
+      console.log(x);
+
+      let {id,item}=x;
+      let search =shopItemsData.find((y) => y.id ===id) || [];
+
+
+      return `
+
+      <div class="cart-item">
+      <img src = ${search.img} alt="" /  width = "100px">
+      <div class="details">
+
+      <div class="title-price-x"></div>
+     
+         <h4 class ="title-price-x">
+
+         <p>${search.name}</p>
+         <p class="cart-item-price">$ ${search.price}</p>
+
+        </h4>
+        
+        <i class="bi bi-x-lg"></i>
+
+       <div class="cart-buttons"></div>
+
+       <div class="buttons">
+        <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+        <div  id=${id} class="quantity">
+
+        ${search.item === undefined? 0: search.item}
+
+
+       </div>
+        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+                           
+      </div>
+
+        <h3></h3>
+        </div>
+
+        </div>
+
+
+      `;
+    })
+    .join('');
+
+
+code....
+
+<div class="buttons">
+        <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+        <div  id=${id} class="quantity">
+
+        ${search.item === undefined? 0: search.item}
+
+
+       </div>
+        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+                           
+      </div>
+
+
+after the code change slightly
+
+<div class="buttons">
+        <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+        <div  id=${id} class="quantity">${item}</div>
+        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+                           
+      </div>
+
+
+
+
+${search.item === undefined? 0: search.item} this line will remain 
+
+and add quantity change 
+
+<div  id=${id} class="quantity">${item}</div>
+
+<div class="buttons">
+        <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+        <div  id=${id} class="quantity">${item}</div>
+        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+                           
+      </div>
+
+
+
+//010  thee code change the increment nd decrement & update code will include 
+same main.js code will implement the cart.js 
+
+
+code
+
+but the decrement inside console logremove and insert 
+
+insert 
+   
+    generateCartItems();
+
+it is mainly use for the  items 0 and it will delete the card in the 
+
+entire page
+
+
+//11  after implement h3 code
+
+<h3>$ ${item * search.price}</h3>
+        </div>
+      </div>
+      `;
+
+
+    it will use for price calculate work
+
+
+
+//12 the console.log(); change only decrement but not work increment so applie generatecartitems 
+in the 
+
+
+
+console.log(basket) alter the 
+
+
+generateCartItems();
+
+
+let the increment will work
+
+
+
+
+
+//13 the code after another work  implement in the remove item work implement
+
+<i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
+
+
+code entire cart.js html codes .....
+
+
+let generateCartItems = () => {
+  if (basket.length !== 0) {
+    return (ShoppingCart.innerHTML = basket
+      .map((x) => {
+        let { id, item } = x;
+        let search = shopItemsData.find((y) => y.id === id) || [];
+        return `
+      <div class="cart-item">
+        <img width="100" src=${search.img} alt="" />
+        <div class="details">
+
+          <div class="title-price-x">
+              <h4 class="title-price">
+                <p>${search.name}</p>
+                <p class="cart-item-price">$ ${search.price}</p>
+              </h4>
+              <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
+          </div>
+
+          <div class="buttons">
+               <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+              <div id=${id} class="quantity">${item}</div>
+              <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+          </div>
+
+          <h3>$ ${item * search.price}</h3>
+        </div>
+      </div>
+      `;
+      })
+      .join(""));
+  } else {
+    ShoppingCart.innerHTML = ``;
+    label.innerHTML = `
+    <h2>Cart is Empty</h2>
+    <a href="index.html">
+      <button class="HomeBtn">Back to home</button>
+    </a>
+    `;
+  }
+};
+
+generateCartItems();
+
+
+
+//09 the session will implement the remove item code 
+
+code.....
+
+let removeItem = (id) => {
+  let selectedItem = id;
+  console.log(selectedItem);
+  
+  
+};
+
+
+
+this code is inspect output 
+
+
+eg: every time it will clickon the x in thw cart 
+
+it will createthe unique id and item showing 
+
+
+output:
+
+<div id="dwdhiwidjw" class="quantity">4</div>
+
+
+
+//after the generate functions it will use the code
+
+console.log(x);
+
+remove thecode 
+
+
+code....
+
+
+
+let generateCartItems = () => {
+  if (basket.length !== 0) {
+    return (ShoppingCart.innerHTML = basket
+      .map((x) => {
+        //console.log(x);
+
+
+and below remove item code can 
+
+comment (or) remove the console.log(selectedItem.id);
+
+after going some work using filter function this code 
+
+is gives the every time 
+
+click the cross symbol(x)
+
+
+note:
+    
+  entire data & items can remove the local storage.
+
+
+eg: codes
+
+
+using the code can remove the datas fromthe local storage
+
+
+code before focus item 4 
+
+..
+
+[{id: "hdbqidjq", item: 5}, {id: "dwdhiwidjw", item: 4}, {id: "dxwjhwkk", item: 2}]
+0
+: 
+{id: "hdbqidjq", item: 5}
+1
+: 
+{id: "dwdhiwidjw", item: 4}
+id
+: 
+"dwdhiwidjw"
+item
+: 
+4
+2
+: 
+{id: "dxwjhwkk", item: 2}
+id
+: 
+"dxwjhwkk"
+item
+: 
+2
+
+
+
+after the item 
+
+
+     4 can easily remove using the    
+
+          filterandjson.stringfy help can remove
+
+
+
+after code.
+
+    [{id: "hdbqidjq", item: 5}, {id: "dwdhiwidjw", item: 4}, {id: "dxwjhwkk", item: 2}]
+0
+: 
+{id: "hdbqidjq", item: 5}
+1
+: 
+
+2
+: 
+{id: "dxwjhwkk", item: 2}
+id
+: 
+"dxwjhwkk"
+item
+: 
+2
+
+
+//10  after implement the code 
+
+can delete the cart the particular data can enable only display in the 
+
+local storage all are empty it can only showing 
+
+
+empty []----------array-----   note.
+
+
+
+
+//11 then after implement the total amount function 
+
+
+it will inlude
+
+
+
+code:
+
+
+  let TotalAmount = () => {
+  if (basket.length !== 0) {
+    let amount = basket
+      .map((x) => {
+        let { item, id } = x;
+        let search = shopItemsData.find((y) => y.id === id) || [];
+
+        return item * search.price;
+      });
+      
+     console.log(amount);
+    
+  } else return;
+};
+
+TotalAmount();
+
+
+
+
+
+//this output can disply only the items price can display the 
+
+array format 
+
+
+egg: output:
+
+   (2) [900, 180]  this based price showing.
+
+
+
+//12 then use the 
+
+
+             total amount last include reduce  function code .
+
+
+             .reduce((x,y) => x+y, 0);
+
+             this code 
+
+                 x =previous number
+
+                 y= Another number 
+
+                 it can add and get another one 
+
+                 0 = can intialisation in the reason will mainly use
+
+
+
+code total amount include using reduce 
+
+
+  let TotalAmount = () => {
+  if (basket.length !== 0) {
+    let amount = basket
+      .map((x) => {
+        let { item, id } = x;
+        let search = shopItemsData.find((y) => y.id === id) || [];
+
+        return item * search.price;
+        
+      }).reduce((x,y) => x+y, 0);...........this line can mainly use this code
+      
+     console.log(amount);
+    
+  } else return;
+};
+
+TotalAmount();
+
+
+
+
+//13 after reduce code can display the output array but add the calculation
+
+reduce function using before
+   2[200,700]
+
+reduce function using After
+   [900]
+
+
+//14 then top of the variable nme is used to declare the top of the 
+
+
+top bill calculation work 
+
+and the total amount code can comment the 
+
+console.log(amount) is necessary and iclude the totalbill code can below.
+
+
+code.......
+
+
+total amount can include some total bill code include.
+
+
+code...
+
+let TotalAmount = () => {
+  if (basket.length !== 0) {
+    let amount = basket
+      .map((x) => {
+        let { item, id } = x;
+        let search = shopItemsData.find((y) => y.id === id) || [];
+
+        return item * search.price;
+
+      }).reduce((x,y) => x+y, 0);
+      
+     //console.log(amount); ....comment the code 
+
+
+..............   This code.............................................................
+
+     label.innerHTML = `     
+      <h2>Total Bill : $ ${amount}</h2>
+      <button class="checkout">Checkout</button>
+      <button onclick="clearCart()" class="removeAll">Clear Cart</button>
+      `;
+    
+  } else return;
+};
+
+TotalAmount();
+ 
+
+
+//14 after applying some styles coding can 
+  
+design the total bill cart buttons.
+
+
+
+and can include the total amount() function include the update function is necessary.
+
+
+code....
+   
+    let update = (id) => {
+  let search = basket.find((x) => x.id === id);
+  // console.log(search.item);
+  document.getElementById(id).innerHTML = search.item;
+  calculation();
+
+  
+  TotalAmount();.......this line.........
+};
+
+
+
+
+
+
+
+
+//15 then the clearCart button is not work 
+so this code implement in this session.
+
+
+code....
+
+let clearCart = () => {
+    basket = [];
+    generateCartItems();
+    localStorage.setItem("data", JSON.stringify(basket));
+  };
+
+
+
+
+
+
+
+
+
+
+
+

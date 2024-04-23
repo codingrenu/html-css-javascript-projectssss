@@ -1,0 +1,9 @@
+this time the cart can clickpointer code include css ok
+
+body below pyt the code
+
+i{
+    cursor:pointer;
+}
+
+
